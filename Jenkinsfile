@@ -1,10 +1,20 @@
 pipeline {
     agent any
 
+    tools{
+        maven "maven"
+        //Any other tools you are going to use
+    }
+
+    environment{
+        VERSION_NAME = "1.1.0"
+    }
+
     stages {
         stage('build') {
             steps {
                 echo 'Building application'
+                echo "${VERSION_NAME}"
             }
         }
         
