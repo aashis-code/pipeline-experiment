@@ -8,15 +8,17 @@ pipeline {
             }
         }
         
-        stage('test'){
+        stage('compile'){
             steps {
-                echo 'Testing application.'
+                echo 'This step involves compiling java file to Class file(byte code).'
+                sh 'javac Test.java'
             }
         }
         
-        stage('deploy'){
+        stage('run'){
             steps {
-                echo 'Deploying application.'
+                echo 'This step finally run the program.'
+                sh 'java Test'
             }
         }
     }
