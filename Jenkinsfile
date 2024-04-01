@@ -11,7 +11,7 @@ pipeline {
         stage('compile'){
             steps {
                 
-                sh 'javac ./Test.java'
+                bat 'javac ./Test.java'
             }
         }
         
