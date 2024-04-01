@@ -18,7 +18,7 @@ pipeline {
         stage('run'){
             steps {
            
-                sh 'java Test'
+                bat 'java Test'
             }
         }
     }
