@@ -11,14 +11,14 @@ pipeline {
         stage('compile'){
             steps {
                 echo 'This step involves compiling java file to Class file(byte code).'
-                sh 'javac Test.java'
+                bat 'javac Test.java'
             }
         }
         
         stage('run'){
             steps {
                 echo 'This step finally run the program.'
-                sh 'java Test'
+                bat 'java Test'
             }
         }
     }
