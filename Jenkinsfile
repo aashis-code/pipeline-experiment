@@ -11,7 +11,7 @@ pipeline {
         stage('compile'){
             steps {
                 echo 'This step involves compiling java file to Class file(byte code).'
-                bat 'javac Test.java'
+                bat 'javac ./Test.java'
             }
         }
         
